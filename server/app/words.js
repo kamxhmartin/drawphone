@@ -19,6 +19,7 @@ const PACK_NAMES = [
     "Animals",
     "Adjectives",
     "Verbs",
+    "Baby words"
 ];
 
 class WordPacks {

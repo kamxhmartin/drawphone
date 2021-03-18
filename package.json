@@ -2,12 +2,12 @@
     "name": "drawphone",
     "version": "1.0.0",
     "engines": {
-        "node": "15.x",
+        "node": "15.10.x",
         "npm": "6.x"
     },
     "description": "Telephone with pictures",
     "scripts": {
-        "start": "run-p start:dev build:dev",
+        "start": "run-s build:prod start:prod",
         "dev": "run-p start:dev build:dev",
         "start:dev": "nodemon --exec npm run start:prod --ignore server/public/ --delay 2",
         "build:dev": "webpack --mode development --watch",

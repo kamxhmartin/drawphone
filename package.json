@@ -7,7 +7,7 @@
     },
     "description": "Telephone with pictures",
     "scripts": {
-        "start": "run-s build:prod start:prod",
+        "start": "run-s start:dev build:dev",
         "dev": "run-p start:dev build:dev",
         "start:dev": "nodemon --exec npm run start:prod --ignore server/public/ --delay 2",
         "build:dev": "webpack --mode development --watch",

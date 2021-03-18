@@ -1,8 +1,11 @@
 {
     "name": "drawphone",
     "version": "1.0.0",
+    "engines": {
+        "node": "15.10.x",
+        "npm": "6.x"
+    },
     "description": "Telephone with pictures",
-    "private": true,
     "scripts": {
         "start": "run-s build:prod start:prod",
         "dev": "run-p start:dev build:dev",
@@ -67,19 +70,11 @@
         "nodemon": "^2.0.7",
         "prettier": "^2.2.1"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "run-s format lint test"
-        }
-    },
     "lint-staged": {
         "*.@(js|ts|tsx|json|md)": [
             "npm run lint",
             "npm run format"
         ]
     },
-    "type": "module",
-    "engines": {
-        "node": "15.10.x"
-    }
+    "type": "module"
 }

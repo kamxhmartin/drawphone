@@ -12,7 +12,7 @@
         "start:dev": "nodemon --exec npm run start:prod --ignore server/public/ --delay 2",
         "build:dev": "webpack --mode development --watch",
         "start:prod": "node --experimental-json-modules ./server/bin/www",
-        "build:prod": "webpack --mode production",
+        "build:prod": "webpack NODE_OPTIONS=--max-old-space-size=8192 --mode production",
         "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
         "format": "prettier --write **/*.{js,ts,tsx,json,yml,md}",
         "lint": "eslint . --ext js"

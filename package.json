@@ -2,7 +2,7 @@
     "name": "drawphone",
     "version": "1.0.0",
     "engines": {
-        "node": "15.10.x",
+        "node": "15.x",
         "npm": "6.x"
     },
     "description": "Telephone with pictures",

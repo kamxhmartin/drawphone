@@ -4,7 +4,7 @@
     "description": "Telephone with pictures",
     "private": true,
     "scripts": {
-        "start": "run-s build:prod start:prod",
+        "start": "NODE_ENV=development run-s build:prod start:prod",
         "dev": "run-p start:dev build:dev",
         "start:dev": "nodemon --exec npm run start:prod --ignore server/public/ --delay 2",
         "build:dev": "webpack --mode development --watch",
@@ -32,6 +32,7 @@
         "body-parser": "^1.19.0",
         "bootstrap": "^4.6.0",
         "bootstrap-sweetalert": "^1.0.1",
+        "canvas": "^2.7.0",
         "cookie-parser": "^1.4.5",
         "css-loader": "^5.0.2",
         "debug": "^4.3.1",
@@ -77,5 +78,8 @@
             "npm run format"
         ]
     },
-    "type": "module"
+    "type": "module",
+    "engines": {
+        "node": "15.10.x"
+    }
 }

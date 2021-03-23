@@ -1,20 +1,14 @@
 {
     "name": "drawphone",
     "version": "1.0.0",
-    "engines": {
-        "node": "15.10.x",
-        "npm": "6.x"
-    },
     "description": "Telephone with pictures",
     "scripts": {
-        "start": "run-s build:prod setnvm:prod use:prod start:prod",
+        "start": "run-s build:prod start:prod",
         "dev": "run-p start:dev build:dev",
         "start:dev": "nodemon --exec npm run start:prod --ignore server/public/ --delay 2",
         "build:dev": "webpack --mode development --watch",
         "start:prod": "npm start",
-        "build:prod": "NODE_OPTIONS=--max-old-space-size=8192 webpack --mode production",
-        "setnvm:prod": "nvm install 15.10.0",
-        "use:prod": "nvm use 15.10.0",
+        "build:prod": "webpack --mode production",
         "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
         "format": "prettier --write **/*.{js,ts,tsx,json,yml,md}",
         "lint": "eslint . --ext js"
